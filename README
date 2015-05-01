@@ -1,0 +1,6 @@
+# simple java test
+
+
+# compile:
+javac *.java
+jar cvf myjar.jar *.class
