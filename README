@@ -4,3 +4,11 @@
 # compile:
 javac *.java
 jar cvf myjar.jar *.class
+
+
+# sign:
+
+keytool -genkey -keystore myKeyStore -alias me
+keytool -selfcert -keystore myKeyStore -alias me
+jarsigner -keystore myKeyStore *.jar me
+
